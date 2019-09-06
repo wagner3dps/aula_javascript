@@ -12,8 +12,12 @@
 		<script type="text/javascript" src="js/funcoes.js"></script>
 		<script type="text/javascript" src="js/button.js"></script>
 		<script type="text/javascript" src="js/redirecionamentoPagina.js"></script>
+		<script type="text/javascript" src="js/onmouseover.js"></script>
+		<script type="text/javascript" src="js/onmouseout.js"></script>
+		<script type="text/javascript" src="js/onload.js"></script>
+		<script type="text/javascript" src="js/onchange.js"></script>
 	</head>
-	<body>		
+	<body onload="carregar()">		
 		<h1>Página teste para arquivos JavaScript</h1>
 		
 		<!-- A Função clicou() encontra-se no arquivo button.js na pasta js --> 
@@ -24,5 +28,18 @@
 		<button type="button" onclick="redirecionar()">Próxima Página</button>
 		<p id="redirecionamento"></p>
 		
+		<!-- A Função trocar() encontra-se no arquivo onmouseover.js na pasta js -->
+		<button type="button" onmouseover="trocar()">Passe o Mouse Aqui Please!</button>
+		<p id="mousemove"></p>
+		
+		<!-- A Função voltar() encontra-se no arquivo onmouseout.js na pasta js -->
+		<button type="button" onmouseout="voltar()">Passe o Mouse e Veja o Resultado! </button>
+		<p id="mouseout"></p>
+		
+		<select onchange="funcaoMudar(this)"> 
+			<option value="1">Valor 1</option>
+			<option value="2">Valor 2</option>
+			<option value="3">Valor 3</option>
+		</select>
 	</body>
 <html>
